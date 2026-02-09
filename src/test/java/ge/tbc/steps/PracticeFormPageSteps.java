@@ -30,9 +30,21 @@ public class PracticeFormPageSteps extends PracticeFormPage {
         return this;
     }
 
-    public PracticeFormPageSteps genderCheck(){
-        assertTrue(gender.isVisible(), "gender is not visible");
-        assertTrue(gender.isEnabled(), "gender is not enabled");
+    public PracticeFormPageSteps maleGenderCheck(){
+        assertTrue(genderMale.isVisible(), "gender Male is not visible");
+        assertTrue(genderMale.isEnabled(), "gender Male is not enabled");
+        return this;
+    }
+
+    public PracticeFormPageSteps femaleGenderCheck(){
+        assertTrue(genderFemale.isVisible(), "gender Female is not visible");
+        assertTrue(genderFemale.isEnabled(), "gender Female is not enabled");
+        return this;
+    }
+
+    public PracticeFormPageSteps otherGenderCheck(){
+        assertTrue(genderOther.isVisible(), "gender Other is not visible");
+        assertTrue(genderOther.isEnabled(), "gender Other is not enabled");
         return this;
     }
 
@@ -54,9 +66,21 @@ public class PracticeFormPageSteps extends PracticeFormPage {
         return this;
     }
 
-    public PracticeFormPageSteps hobbiesCheck(){
-        assertTrue(hobbies.isVisible(), "hobbies is not visible");
-        assertTrue(hobbies.isEnabled(), "hobbies is not enabled");
+    public PracticeFormPageSteps sportHobbyCheck(){
+        assertTrue(hobbySport.isVisible(), "Sport hobby is not visible");
+        assertTrue(hobbySport.isEnabled(), "Sport hobby is not enabled");
+        return this;
+    }
+
+    public PracticeFormPageSteps readingHobbyCheck(){
+        assertTrue(hobbyReading.isVisible(), "Reading hobby is not visible");
+        assertTrue(hobbyReading.isEnabled(), "Reading hobby is not enabled");
+        return this;
+    }
+
+    public PracticeFormPageSteps musicHobbyCheck(){
+        assertTrue(hobbyMusic.isVisible(), "Music hobby is not visible");
+        assertTrue(hobbyMusic.isEnabled(), "Music hobby is not enabled");
         return this;
     }
 
@@ -75,6 +99,12 @@ public class PracticeFormPageSteps extends PracticeFormPage {
     public PracticeFormPageSteps stateCheck(){
         assertTrue(state.isVisible(), "state is not visible");
         assertTrue(state.isEnabled(), "state is not enabled");
+        return this;
+    }
+
+    public PracticeFormPageSteps cityCheck(){
+        assertTrue(city.isVisible(), "city is not visible");
+        assertTrue(city.isEnabled(), "city ia not enabled");
         return this;
     }
 }
