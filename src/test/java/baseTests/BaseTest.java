@@ -6,7 +6,7 @@ import ge.tbc.data.Constants;
 import org.testng.annotations.BeforeClass;
 
 import java.util.List;
-
+// გვერდის გახსნა მაქვს ცალკე გატანილი, ანუ ცალკე ფოლდერად baseTest
 public class BaseTest {
     //ესენი იმისთვის რომ გაიხსნას გვერდი
     protected Playwright playwright;
