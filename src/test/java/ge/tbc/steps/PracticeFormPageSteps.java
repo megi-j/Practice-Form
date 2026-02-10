@@ -85,8 +85,8 @@ public class PracticeFormPageSteps extends PracticeFormPage {
     }
 
     public PracticeFormPageSteps pictureCheck(){
-        assertTrue(picture.isVisible(), "picture is not visible");
-        assertTrue(picture.isEnabled(), "picture is not enabled");
+        assertTrue(uploadPicture.isVisible(), "picture is not visible");
+        assertTrue(uploadPicture.isEnabled(), "picture is not enabled");
         return this;
     }
 
@@ -104,7 +104,13 @@ public class PracticeFormPageSteps extends PracticeFormPage {
 
     public PracticeFormPageSteps cityCheck(){
         assertTrue(city.isVisible(), "city is not visible");
-        assertTrue(city.isEnabled(), "city ia not enabled");
+        assertTrue(city.isEnabled(), "city should be disabled before state selection");
+        return this;
+    }
+
+    public PracticeFormPageSteps submitCheck(){
+        assertTrue(submit.isVisible(), "submit is not visible");
+        assertTrue(submit.isEnabled(), "submit is not enabled");
         return this;
     }
 }

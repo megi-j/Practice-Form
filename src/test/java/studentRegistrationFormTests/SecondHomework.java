@@ -76,4 +76,8 @@ public class SecondHomework extends BaseTest {
     public void checkCity(){
         practiceFormPageSteps.cityCheck();
     }
+    @Test
+    public void checkSubmit(){
+        practiceFormPageSteps.submitCheck();
+    }
 }

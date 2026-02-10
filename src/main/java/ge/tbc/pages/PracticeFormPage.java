@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 public class PracticeFormPage {
     public Locator firstName, lastName, email, genderMale, genderFemale, genderOther, mobile, dateOfBirth,
-            subjects, hobbySport, hobbyReading, hobbyMusic, uploadPicture, address, state, city;
+            subjects, hobbySport, hobbyReading, hobbyMusic, uploadPicture, address, state, city, submit;
 
     public PracticeFormPage(Page page){
         this.firstName = page.locator("#firstName");
@@ -18,12 +18,13 @@ public class PracticeFormPage {
         this.dateOfBirth = page.locator("#dateOfBirthInput");
         this.subjects = page.locator("#subjectsInput");
         this.hobbySport = page.locator("#hobbies-checkbox-1");
-        this.hobbyReading = page.locator("hobbies-checkbox-2");
-        this.hobbyMusic = page.locator("hobbies-checkbox-3");
+        this.hobbyReading = page.locator("#hobbies-checkbox-2");
+        this.hobbyMusic = page.locator("#hobbies-checkbox-3");
         this.uploadPicture = page.locator("#uploadPicture");
         this.address = page.locator("#currentAddress");
         this.state = page.locator("#react-select-3-input");
         this.city = page.locator("#react-select-4-input");
+        this.submit = page.locator("#submit");
     }
 
 }
