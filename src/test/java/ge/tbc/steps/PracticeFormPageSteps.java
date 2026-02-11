@@ -123,6 +123,24 @@ public class PracticeFormPageSteps extends PracticeFormPage {
         assertFalse(isModalVisible, "Form was submitted but should not be");
         return this;
     }
-
-
+    public PracticeFormPageSteps fillFirstName(String name){
+        firstName.fill(name);
+        return this;
+    }
+    public PracticeFormPageSteps fillLastName(String name){
+        lastName.fill(name);
+        return this;
+    }
+    public PracticeFormPageSteps fillMobile(String number){
+        mobile.fill(number);
+        return this;
+    }
+    public PracticeFormPageSteps selectMaleGender(){
+        genderMale.click();
+        return this;
+    }
+    public PracticeFormPageSteps formShouldBeSubmitted(){
+        assertTrue(modal.isVisible(), "Form was not submitted successfully");
+        return this;
+    }
 }

@@ -86,4 +86,14 @@ public class SecondHomework extends BaseTest {
                 .formShouldNotBeSubmitted();
 
     }
+    @Test
+    public void happyPathSubmissionTest(){
+        practiceFormPageSteps.fillFirstName("Test")
+                .fillLastName("User")
+                .selectMaleGender()
+                .fillMobile("5957832833")
+                .clickSubmit()
+                .formShouldBeSubmitted();
+    }
+
 }
