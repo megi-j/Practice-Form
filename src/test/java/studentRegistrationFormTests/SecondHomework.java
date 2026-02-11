@@ -80,4 +80,10 @@ public class SecondHomework extends BaseTest {
     public void checkSubmit(){
         practiceFormPageSteps.submitCheck();
     }
+    @Test
+    public void requiredFieldsValidationTest(){
+        practiceFormPageSteps.clickSubmit()
+                .formShouldNotBeSubmitted();
+
+    }
 }

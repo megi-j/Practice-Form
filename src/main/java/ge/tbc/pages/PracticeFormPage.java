@@ -5,7 +5,8 @@ import com.microsoft.playwright.Page;
 
 public class PracticeFormPage {
     public Locator firstName, lastName, email, genderMale, genderFemale, genderOther, mobile, dateOfBirth,
-            subjects, hobbySport, hobbyReading, hobbyMusic, uploadPicture, address, state, city, submit;
+            subjects, hobbySport, hobbyReading, hobbyMusic, uploadPicture, address, state, city, submit,
+            modal;
 
     public PracticeFormPage(Page page){
         this.firstName = page.locator("#firstName");
@@ -25,6 +26,7 @@ public class PracticeFormPage {
         this.state = page.locator("#react-select-3-input");
         this.city = page.locator("#react-select-4-input");
         this.submit = page.locator("#submit");
+        this.modal = page.locator(".modal-content");
     }
 
 }

@@ -1,4 +1,5 @@
 package ge.tbc.steps;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import com.microsoft.playwright.Page;
@@ -113,4 +114,15 @@ public class PracticeFormPageSteps extends PracticeFormPage {
         assertTrue(submit.isEnabled(), "submit is not enabled");
         return this;
     }
+    public PracticeFormPageSteps clickSubmit(){
+        submit.click();
+        return this;
+    }
+    public PracticeFormPageSteps formShouldNotBeSubmitted(){
+        boolean isModalVisible = modal.isVisible();
+        assertFalse(isModalVisible, "Form was submitted but should not be");
+        return this;
+    }
+
+
 }
