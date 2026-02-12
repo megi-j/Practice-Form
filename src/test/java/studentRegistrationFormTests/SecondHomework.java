@@ -1,9 +1,12 @@
 package studentRegistrationFormTests;
 
 import baseTests.BaseTest;
+import ge.tbc.data.Constants;
 import ge.tbc.steps.PracticeFormPageSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+
 
 public class SecondHomework extends BaseTest {
     private PracticeFormPageSteps practiceFormPageSteps;
@@ -88,19 +91,19 @@ public class SecondHomework extends BaseTest {
     }
     @Test
     public void happyPathSubmissionTest(){
-        practiceFormPageSteps.fillFirstName("Test")
-                .fillLastName("User")
+        practiceFormPageSteps.fillFirstName(Constants.VALID_FIRST_NAME)
+                .fillLastName(Constants.VALID_LAST_NAME)
                 .selectMaleGender()
-                .fillMobile("5957832833")
+                .fillMobile(Constants.VALID_MOBILE_NUMBER)
                 .clickSubmit()
                 .formShouldBeSubmitted();
     }
     @Test
     public void mobileValidation(){
-        practiceFormPageSteps.fillFirstName("Test")
-                .fillLastName("User")
+        practiceFormPageSteps.fillFirstName(Constants.VALID_FIRST_NAME)
+                .fillLastName(Constants.VALID_LAST_NAME)
                 .selectMaleGender()
-                .fillMobile("1478")
+                .fillMobile(Constants.INVALID_MOBILE_NUMBER)
                 .clickSubmit()
                 .mobileShouldBeInvalid();
     }
