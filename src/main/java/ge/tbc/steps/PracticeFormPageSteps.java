@@ -108,7 +108,7 @@ public class PracticeFormPageSteps extends PracticeFormPage {
 
     public PracticeFormPageSteps cityCheck(){
         Assert.assertTrue(city.isVisible(), "city is not visible");
-        Assert.assertTrue(city.isEnabled(), "city should be disabled until state is selected");
+        Assert.assertFalse(city.isEnabled(), "city should be disabled until state is selected");
         return this;
     }
 
