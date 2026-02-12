@@ -14,6 +14,8 @@ public class PracticeFormPageSteps extends PracticeFormPage {
     }
 
     public PracticeFormPageSteps firstNameCheck(){
+        //assertTrue ნიშნავს რომ პირობა უნდა იყოს true, თუ არ არის მაშინ უნდა გამოვიდეს ეს მესიჯი და ტესტი ფეილდება
+        //assertFalse ნიშნავს რომ პირობა უნდა იყოს false.
         assertTrue(firstName.isVisible(), "First name input is not visible");
         assertTrue(firstName.isEnabled(), "First name input is not enabled");
         return this;
@@ -105,7 +107,7 @@ public class PracticeFormPageSteps extends PracticeFormPage {
 
     public PracticeFormPageSteps cityCheck(){
         assertTrue(city.isVisible(), "city is not visible");
-        assertTrue(city.isEnabled(), "city should be disabled before state selection");
+        assertTrue(city.isEnabled(), "city should be disabled until state is selected");
         return this;
     }
 
@@ -141,6 +143,11 @@ public class PracticeFormPageSteps extends PracticeFormPage {
     }
     public PracticeFormPageSteps formShouldBeSubmitted(){
         assertTrue(modal.isVisible(), "Form was not submitted successfully");
+        return this;
+    }
+    public PracticeFormPageSteps mobileShouldBeInvalid(){
+        Boolean isValid = (Boolean) mobile.evaluate("el=>el.checkValidity()"); //el არის მობ ნომრის input
+        assertFalse(isValid, "Mobile should be invalid");
         return this;
     }
 }

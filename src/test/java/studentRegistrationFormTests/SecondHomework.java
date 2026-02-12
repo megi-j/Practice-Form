@@ -95,5 +95,14 @@ public class SecondHomework extends BaseTest {
                 .clickSubmit()
                 .formShouldBeSubmitted();
     }
+    @Test
+    public void mobileValidation(){
+        practiceFormPageSteps.fillFirstName("Test")
+                .fillLastName("User")
+                .selectMaleGender()
+                .fillMobile("1478")
+                .clickSubmit()
+                .mobileShouldBeInvalid();
+    }
 
 }

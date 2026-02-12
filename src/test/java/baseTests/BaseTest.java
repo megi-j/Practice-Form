@@ -27,7 +27,7 @@ public class BaseTest {
         );
 
         context = browser.newContext(
-                new Browser.NewContextOptions().setViewportSize(null)
+                new Browser.NewContextOptions().setViewportSize(null)   //გამოიყენოს რეალური window ზომა და არა დეფაულტად რომელიმე ზომა
         );
 
         page = context.newPage();

@@ -13,8 +13,8 @@ public class PracticeFormPage {
         this.lastName = page.locator("#lastName");
         this.email = page.locator("#userEmail");
         this.genderMale = page.locator("label[for='gender-radio-1']");
-        this.genderFemale = page.locator("#gender-radio-2");
-        this.genderOther = page.locator("#gender-radio-3");
+        this.genderFemale = page.locator("label[for='gender-radio-2']");
+        this.genderOther = page.locator("label[for='gender-radio-3']");
         this.mobile = page.locator("#userNumber");
         this.dateOfBirth = page.locator("#dateOfBirthInput");
         this.subjects = page.locator("#subjectsInput");
