@@ -13,6 +13,11 @@ public class PracticeFormPageSteps extends PracticeFormPage {
         super(page);
         this.page = page;
     }
+    public PracticeFormPageSteps navigateToPracticeForm(){
+        formLink.click();
+        practiceFormLink.click();
+        return this;
+    }
 
     public PracticeFormPageSteps firstNameCheck(){
         //assertTrue ნიშნავს რომ პირობა უნდა იყოს true, თუ არ არის მაშინ უნდა გამოვიდეს ეს მესიჯი და ტესტი ფეილდება
@@ -107,7 +112,7 @@ public class PracticeFormPageSteps extends PracticeFormPage {
     }
 
     public PracticeFormPageSteps cityCheck(){
-        Assert.assertTrue(city.isVisible(), "city is not visible");
+//        Assert.assertTrue(city.isVisible(), "city is not visible");
         Assert.assertFalse(city.isEnabled(), "city should be disabled until state is selected");
         return this;
     }

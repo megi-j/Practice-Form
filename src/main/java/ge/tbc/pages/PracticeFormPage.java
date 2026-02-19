@@ -2,11 +2,12 @@ package ge.tbc.pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
 
 public class PracticeFormPage {
     public Locator firstName, lastName, email, genderMale, genderFemale, genderOther, mobile, dateOfBirth,
             subjects, hobbySport, hobbyReading, hobbyMusic, uploadPicture, address, state, city, submit,
-            modal;
+            modal, formLink, practiceFormLink;
 
     public PracticeFormPage(Page page){
         this.firstName = page.locator("#firstName");
@@ -27,6 +28,8 @@ public class PracticeFormPage {
         this.city = page.locator("#react-select-4-input");
         this.submit = page.locator("#submit");
         this.modal = page.locator(".modal-content");
+        this.formLink = page.getByText("Forms");
+        this.practiceFormLink = page.getByText("Practice Form");
     }
 
 }

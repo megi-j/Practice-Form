@@ -14,6 +14,7 @@ public class SecondHomework extends BaseTest {
     @BeforeClass
     public void setUpSteps(){
         practiceFormPageSteps = new PracticeFormPageSteps(getPage());
+        practiceFormPageSteps.navigateToPracticeForm();
     }
     @Test(priority = 1)
     public void checkFormElementsVisibility(){
